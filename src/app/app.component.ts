@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { BoardModule } from './board/board.module'; // Импортируйте модуль
+import { BoardModule } from './board/board.module';
 
 
 @Component({

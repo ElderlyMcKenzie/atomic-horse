@@ -10,12 +10,12 @@
 
   &:nth-child(odd) .cell:nth-child(odd),
   &:nth-child(even) .cell:nth-child(even) {
-    background-color: #d2b48c; // светло-коричневый
+    background-color: #d2b48c;
   }
 
   &:nth-child(odd) .cell:nth-child(even),
   &:nth-child(even) .cell:nth-child(odd) {
-    background-color: #fff8dc; // кремовый
+    background-color: #fff8dc;
   }
 }
 
@@ -40,29 +40,95 @@
   }
 
   &.possible {
-    background-color: #90ee90 !important; // Легкий зеленый для возможных ходов
+    background-color: #90ee90 !important;
   }
 }
 
 .button {
-  display: flex;            /* Включаем Flexbox */
-  justify-content: center;  /* Горизонтальное центрирование */
-  align-items: center;      /* Вертикальное центрирование */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button button {
   margin: auto;
-  background-color: #28a745; /* Зеленый фон */
-  color: white;              /* Белый цвет текста */
-  padding: 10px 20px;        /* Внутренние отступы */
-  border: none;              /* Убираем границу */
-  border-radius: 5px;        /* Закругленные углы */
-  font-size: 16px;           /* Размер текста */
-  cursor: pointer;           /* Курсор при наведении */
-  transition: background-color 0.3s; /* Плавный переход цвета */
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
   margin-top: 3vh;
 
   &:hover {
-    background-color: #218838; /* Темно-зеленый при наведении */
+    background-color: #218838;
+  }
+}
+
+/* Адаптация для планшетов */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .cell.knight {
+    font-size: 35px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Адаптация для ПК */
+@media (min-width: 1025px) {
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 26px;
+  }
+
+  .cell.knight {
+    font-size: 45px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
+
+/* Адаптация для телефонов */
+@media (max-width: 767px) {
+  .cell {
+    width: 30px; /* Уменьшаем размер ячейки */
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .cell.knight {
+    font-size: 30px;
+  }
+
+  .button button {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }
